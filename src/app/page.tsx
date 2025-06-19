@@ -3,6 +3,17 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      {/* Tailwind CSS Test Section */}
+      <div className="fixed top-4 left-4 z-50 bg-red-500 text-white p-4 rounded-lg shadow-lg border-2 border-blue-500">
+        <h2 className="text-xl font-bold mb-2">Tailwind CSS Test</h2>
+        <p className="text-sm">If you can see this red box with white text, Tailwind is working! 🎉</p>
+        <div className="mt-2 flex gap-2">
+          <span className="bg-green-400 text-black px-2 py-1 rounded text-xs">Green</span>
+          <span className="bg-yellow-400 text-black px-2 py-1 rounded text-xs">Yellow</span>
+          <span className="bg-purple-400 text-white px-2 py-1 rounded text-xs">Purple</span>
+        </div>
+      </div>
+
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
