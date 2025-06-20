@@ -4,11 +4,11 @@ import { supabase } from '../../lib/supabaseClient';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).end();
 
-  const { content, entropy } = req.body as { content: string; entropy: number };
+  const { content } = req.body as { content: string };
 
   const { data, error } = await supabase
-    .from('entries')
-    .insert([{ content, entropy_score: entropy }]);
+    .from('entries2')
+    .insert([{ content}]);
 
   if (error) {
     console.error(error);
